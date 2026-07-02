@@ -1,5 +1,3 @@
-
-Analysis code for Kara Neurodegenerative Disease Lab | Written for Galectin LAMP1 Lipidtox Hoescht Experiment
 # Galectin / LAMP1 / LipidTOX / Hoechst Analysis
 
 Notebook-driven image analysis for M17D 4-channel microscopy data.
@@ -19,16 +17,37 @@ The four channels are:
 
 ## Quickstart
 
-1. Open [M17D_4channel_analysis.ipynb](M17D_4channel_analysis.ipynb).
-2. Put your .czi files in one of the folders listed in `IMAGE_FOLDER_NAMES` inside the notebook, or in the local `images/` subfolder.
-3. Install the notebook dependencies if needed:
+This repository only includes the notebook. You need to create the local input and output folders before running it.
+
+1. Clone or download the repo, then open a terminal in the galectin folder.
+2. Create the folders the notebook expects:
+
+   ```bash
+   mkdir -p images Results Results/masks
+   ```
+
+3. Create one subfolder per dataset name from `IMAGE_FOLDER_NAMES` if you want to keep files organized:
+
+   ```bash
+   mkdir -p images/M17D_52926_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
+   mkdir -p images/M17D_60426_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
+   mkdir -p images/M17D_60526_siRNA_OA_Fed_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
+   mkdir -p images/M17D_60926_siRNA_OA_Fed_galectinGFP_LAMP1RFP_LipidTOXfr_Hoechst
+   mkdir -p images/M17D_61126_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
+   mkdir -p images/M17D_61826_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
+   mkdir -p images/M17D_61826_siRNA_OA_Fed_galectinGFP_LAMP1RFP_LipidTOXfr_Hoechst
+   ```
+
+4. Move your .czi files into those folders, or keep them directly under `images/` if you prefer a simpler setup.
+
+5. Install the notebook dependencies if needed:
 
    ```bash
    pip install cellpose numpy pandas matplotlib scikit-image czifile scipy
    ```
 
-4. Run the notebook top to bottom.
-5. Check `Results/` for the CSV output and `Results/masks/` for saved masks.
+6. Open [M17D_4channel_analysis.ipynb](M17D_4channel_analysis.ipynb) and run the notebook top to bottom.
+7. Check `Results/` for the CSV output and `Results/masks/` for saved masks.
 
 ## Requirements
 
@@ -48,7 +67,7 @@ GPU support is optional. If a CUDA-capable GPU is available, keep `USE_GPU = Tru
 - Multi-channel `.czi` files
 - Folder names listed in `IMAGE_FOLDER_NAMES`
 
-The notebook looks for each folder name first in the analysis directory and then in `images/`.
+The notebook looks for each folder name first in the analysis directory and then in `images/`. If you are starting from scratch, create those folders yourself before running the notebook.
 
 ## Outputs
 
