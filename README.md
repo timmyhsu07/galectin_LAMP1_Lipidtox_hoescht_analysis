@@ -27,27 +27,22 @@ This repository only includes the notebook. You need to create the local input a
    ```
 
 3. Create one subfolder per dataset name from `IMAGE_FOLDER_NAMES` if you want to keep files organized:
+   Also, keep in mind the repo's folder names were used from our actual experiment. Make sure to change these. 
 
    ```bash
-   mkdir -p images/M17D_52926_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
-   mkdir -p images/M17D_60426_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
-   mkdir -p images/M17D_60526_siRNA_OA_Fed_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
-   mkdir -p images/M17D_60926_siRNA_OA_Fed_galectinGFP_LAMP1RFP_LipidTOXfr_Hoechst
-   mkdir -p images/M17D_61126_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
-   mkdir -p images/M17D_61826_siRNA_galectinGFP_LAMP1RFP_LipidTOXfr_hoechst
-   mkdir -p images/M17D_61826_siRNA_OA_Fed_galectinGFP_LAMP1RFP_LipidTOXfr_Hoechst
+   mkdir -p images/ (your folder name) 
    ```
 
-4. Move your .czi files into those folders, or keep them directly under `images/` if you prefer a simpler setup.
+5. Move your .czi files into those folders, or keep them directly under `images/` if you prefer a simpler setup.
 
-5. Install the notebook dependencies if needed:
+6. Install the notebook dependencies if needed:
 
    ```bash
    pip install cellpose numpy pandas matplotlib scikit-image czifile scipy
    ```
 
-6. Open [M17D_4channel_analysis.ipynb](M17D_4channel_analysis.ipynb) and run the notebook top to bottom.
-7. Check `Results/` for the CSV output and `Results/masks/` for saved masks.
+7. Open [M17D_4channel_analysis.ipynb](M17D_4channel_analysis.ipynb) and run the notebook top to bottom.
+8. Check `Results/` for the CSV output and `Results/masks/` for saved masks.
 
 ## Requirements
 
